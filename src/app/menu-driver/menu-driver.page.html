@@ -1,0 +1,45 @@
+<ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menu Opciones Driver</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-button expand="block" color="black" (click)="Datosd()">Configuracion de Conductor</ion-button>
+            <ion-button expand="block" color="black" href="/registro-auto">Registro de Auto</ion-button>
+            <ion-button expand="block">Historial de Viajes</ion-button>
+            <ion-button expand="block" (click)="logout()">LOG OUT</ion-button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Menu Driver
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118472.47144633476!2d-102.36134066139245!3d21.885879238927814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ec143ae4d9fb%3A0x4016978679c5220!2sAguascalientes%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1617154858954!5m2!1ses-419!2smx"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <h2>Peticiones de Viajes</h2>
+    <ion-card *ngFor="let viaje1 of viajes">
+        <ion-card-header>
+            <ion-card-title>Alerta de Viaje Solicitado</ion-card-title>
+            <p>ID Viaje: {{viaje1._id}}</p>
+            <p>Destino: {{viaje1.destino}}</p>
+            <p>Ubicacion Actual: {{viaje1.actual}}</p>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-button class="boton">Confirmar</ion-button>
+            <ion-button class="boton" (click)="deleteViajes(viaje1._id)">Denegar</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

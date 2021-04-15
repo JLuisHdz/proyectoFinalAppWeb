@@ -1,0 +1,29 @@
+ion-title {
+    font-size: 20px;
+    color: white;
+    //font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(39, 39, 39);
+    padding-top: 2%;
+    text-align: center;
+}
+
+ion-label {
+    color: white;
+    font-size: 10px;
+}
+
+.cancelar {
+    position: relative;
+    left: 30%;
+}
+
+.guardar {
+    position: relative;
+    left: 8%;
+}
+
+.back {
+    position: relative;
+    width: 20px;
+    height: 23px;
+}

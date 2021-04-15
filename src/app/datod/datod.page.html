@@ -1,0 +1,25 @@
+<ion-back-button class="back" defaultHref="/menu-driver"></ion-back-button>
+
+<ion-content>
+  <ion-item>
+    <ion-input placeholder="Telefono" [(ngModel)]='datosp.telefono'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="RFC" [(ngModel)]='datosp.rfc'></ion-input>
+  </ion-item>
+    <ion-avatar (click)="tomarFoto()" class="ft" [(ngModel)]='datosp.imagen'>
+      <img [src]= "fotoPerfil">
+    </ion-avatar>
+    <!-- <div class="fr">
+      <ion-text class="display-1 text-center custom-class">Upload profile</ion-text>
+      <ion-img src="rounded-circle" [src]="urllink"></ion-img>
+      <ion-imput type="file" class="btn btn-success btn-sm" (change) ="selectFile($event)"></ion-imput>
+      </div> -->
+  <!-- </ion-item> -->
+  <div class="ion-margin-top" >
+    <ion-button expand="block" (click)="Agregardatos()">Agregar</ion-button>
+  </div>
+  <div class="ion-margin-top">
+    <ion-button expand="block" (click)="dismiss()">Cerrar</ion-button>
+  </div>
+</ion-content>

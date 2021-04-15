@@ -1,0 +1,15 @@
+<ion-back-button class="back" defaultHref="/menu-driver"></ion-back-button>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Calificación del conductor</ion-label>
+        <ion-select placeholder="Calificar al conductor">
+            <ion-select-option value="Excelente">Excelente</ion-select-option>
+            <ion-select-option value="Regular">Regular</ion-select-option>
+            <ion-select-option value="Malo">Malo</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <div class="ion-margin-top">
+        <ion-button expand="block" (click)="dismiss()">No gracias</ion-button>
+    </div>
+</ion-content>

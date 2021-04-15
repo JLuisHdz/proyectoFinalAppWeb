@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button class="back" defaultHref="/menu-driver"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <br>
+    <br><br>
+    <ion-card *ngFor="let auto1 of autos">
+        <ion-card-header>
+            <ion-card-title>Alerta de Viaje Solicitado</ion-card-title>
+            <p>ID Automovil: {{auto1._id}}</p>
+            <p>placas: {{auto1.placas}}</p>
+            <p>modelo: {{auto1.modelo}}</p>
+            <p>Año de Fabricacion:{{auto1.anio}}</p>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-button class="boton" color="danger" (click)="deleteAutos(autos._id)">Borrar Registro Auto</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

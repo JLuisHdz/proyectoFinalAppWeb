@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button class="back"  defaultHref="/menu-driver">Regresar</ion-back-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+    <br><br>
+    <ion-item>
+        <ion-input placeholder="Titular del auto" [(ngModel)]="auto.idDriver"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+        <ion-input placeholder="Placas" [(ngModel)]="auto.placas"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+        <ion-input placeholder="Modelo del Auto" [(ngModel)]="auto.modelo"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+        <ion-input placeholder="Año de Fabricacion" [(ngModel)]="auto.anio"></ion-input>
+    </ion-item><br>
+
+    <ion-button class="guardar" (click)="postRegistro()" (click)='registroAuto()'>Guardar</ion-button>
+    <ion-button class="cancelar" (click)="close()" defaultHref="/menu-driver">Cancelar</ion-button>
+    <br>
+</ion-content>
